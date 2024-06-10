@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --font-famly:"Inter",sans-serif;
+    --h1-h6-color:#001e2b;
+    --p-color:#5c6c75;
+}
+
+.containers{
+    max-width: 1450px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header{
+   margin: 0;
+   padding: 0;
+
+    .containers{
+        width: 100%;
+
+        .header_top{
+            margin-bottom: 10px;
+            width: 100%;
+            background-color: #f0f3f2;
+            .containers{
+                margin: 0 auto;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .language{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    select{
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
+            }
+
+        }
+
+        .header_down{
+            width: 90%;
+            margin: 0 auto;
+            .header_logo_search_login{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+
+            }
+
+            .form-inline{
+                margin-right: 200px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 50%;
+
+               
+            }
+
+            .login_shop{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                a{
+                    font-size: 20px;
+                    color: #198754;
+                }
+            }
+
+            .navbar-expand-lg .navbar-collapse {
+                justify-content: center;
+                
+                ul{
+                    gap: 30px;
+                    li{
+                        text-shadow: rgb(202, 201, 201) 5px 5px 5px;
+             border-radius: 8px;
+                        a{
+                            position: relative;
+                            font-weight: 600;
+
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                width: 0;
+                                height: 1px;
+                                background-color: #198754;
+                                bottom:0;
+                                left:10px;
+                                transition: all 0.4s;
+
+                            }
+
+                            &:hover{
+                                color: #198754;
+                            }
+                            &:hover::before{
+                                width: 50%;
+                            }
+                        }
+                        ul{
+                            li{
+                                text-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+        
+    }
+}
+
+#section1{
+    .banner-area,
+    .single-banner{
+        height: 100vh;
+    }
+    .single-banner{
+        position: relative;
+
+        .banner-img{
+            -webkit-background-size:cover;
+            background-size: cover;
+            background-position: center 0;
+            height: 90vh;
+            border-radius: 15px;
+
+            .banner-text{
+                position: absolute;
+                top: 35%;
+                left: 10%;
+                text-align: left;
+                h2{
+                    font-size: 55px;
+                    text-transform: uppercase;
+                    color: #5d5d5d;
+                    margin: 0;
+                    font-weight: 400;
+                }
+
+                span{
+                    color: rgb(248,66,88);
+                }
+                p{
+                    width: 70%;
+                    color: #262626;
+                }
+                .banner-btn{
+                    a{
+                        background: rgb(248,66,88);
+                        color: #fff;
+                        padding: 15px 25px;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        border-radius: 50px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .img1{
+            background-image: url(/src/img/product/h1_hero1.jpg.webp);
+        }
+        .img2{
+            background-image: url(/src/img/product/h1_hero2.jpg.webp);
+        }
+        .img3{
+            background-image: url(/src/img/product/h1_hero3.jpg.webp);
+        }
+
+    
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 80px;
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        li{
+            position: relative;
+            display: inline-block;
+            margin: 0 25px;
+            padding: 0;
+            cursor: pointer;
+            button{
+                position: relative;
+                background-color: rgba(248, 66,88);
+                opacity: .25;
+                width: 50px;
+                height: 3px;
+                padding: 0;
+                font-size: 0;
+            }
+        }
+    }
+    .slick-dots li.slick-active button{
+        color:rgb(248,66,88);
+        opacity: .75;
+    
+    }
+}
+
+#category_section{
+    .slick-prev::before, .slick-next::before{
+        color: #000;
+    }
+
+    .containers{
+        .row{
+            .card{
+                transition: all 0.5s;
+                cursor: pointer;
+                padding: 20px 0;
+                .card-img-top{
+                    width: 60%;
+                    margin-left: 40px;
+                    padding-bottom: 20px;
+                }
+                .card-body{
+                    text-align: center;
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                        transition: all 0.5s;
+                        
+                    }
+                }
+                &:hover{
+                    border: 1px solid #198754;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    a{
+                        color: #198754;
+                    }
+                }
+            }
+        }
+    }
+    .slick-slide{
+        margin: 0 10px;
+    }
+}
